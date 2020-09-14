@@ -7,7 +7,7 @@ const Color = styled.div`
   div{
     width: 100px;
     height: 100px;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
   }
   p{
     border-bottom: 2px solid #a0a0a0;
@@ -18,20 +18,24 @@ const Color = styled.div`
   }
 `;
 
-const colorTemplate = ({name, hex, rgb}) => {
-  return (
-    <Color color={hex}>
-      <div />
-      <p>Brand {name} color</p>
-      <p>
-        <h4>HEX </h4>
-        {hex}
-      </p>
-      <p>
-        <h4>RGB </h4>
-        rgb{rgb}
-      </p>
-    </Color>
-  );
-};
+const colorTemplate = ({ name, hex, rgb }) => (
+  <Color color={hex}>
+    <div />
+    <p>
+      Brand
+      {name}
+      color
+    </p>
+    <p>
+      <h4>HEX </h4>
+      {hex}
+    </p>
+    <p>
+      <h4>RGB </h4>
+      rgb
+      {rgb}
+    </p>
+  </Color>
+);
+
 export default colorTemplate;

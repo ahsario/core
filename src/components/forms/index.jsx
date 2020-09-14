@@ -11,18 +11,17 @@ const Forms = styled.div`
   margin-bottom: 20px;
 `;
 
-const FormsPage = () => {
-  return (
-    <div>
-      <Forms>
-        <CreditCardForm />
-        <CompanyForm />
-      </Forms>
-      <Forms>
-        <BasicForm />
-        <HorizontalForm />
-      </Forms>
-    </div>
-  );
-};
+const FormsPage = () => (
+  <div>
+    <Forms>
+      <CreditCardForm />
+      <CompanyForm />
+    </Forms>
+    <Forms>
+      <BasicForm />
+      <HorizontalForm />
+    </Forms>
+  </div>
+);
+
 export default FormsPage;

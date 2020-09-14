@@ -111,9 +111,8 @@ const divStyle = {
   margin: '20px auto',
 };
 
-const SimpleChartComponent = () => {
-  return (
-    <div style={divStyle}><JSCharting options={config} /></div>
-  );
-};
+const SimpleChartComponent = () => (
+  <div style={divStyle}><JSCharting options={config} /></div>
+);
+
 export default SimpleChartComponent;

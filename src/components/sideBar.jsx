@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { styled } from 'linaria/react';
 import { connect } from 'react-redux';
 
 const Menu = styled.div`
   height: 100%;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   position: fixed;
   z-index: 1;
   top: 0;
@@ -42,40 +42,34 @@ const Menu = styled.div`
   }
 `;
 
-const SideBar = ({ isOpen }) => {
-  return (
-    <Menu width={isOpen ? '250px' : '0'}>
-      <li>
-        <NavLink className="passive" activeClassName="active" to="/chart"><li>Dashboard</li></NavLink>
-      </li>
-      <p>THEME</p>
-      <li>
-        <NavLink className="passive" activeClassName="active" to="/colors">Colors</NavLink>
-      </li>
-      <li>Typography</li>
-      <p>COMPONENTS</p>
-      <li>Base</li>
-      <li>Buttons</li>
-      <li>Charts</li>
-      <li>Editors</li>
-      <li>
-        <NavLink className="passive" activeClassName="active" to="/forms">Forms</NavLink>
-      </li>
-      <li>Google Maps</li>
-      <li>Icons</li>
-      <li>Notifications</li>
-      <li>Plugins</li>
-      <li>Tables</li>
-      <li>Widjets</li>
-      <p>EXTRAS</p>
-    </Menu>
-  );
-};
+const SideBar = ({ isOpen }) => (
+  <Menu width={isOpen ? '250px' : '0'}>
+    <li>
+      <NavLink className="passive" activeClassName="active" to="/chart"><li>Dashboard</li></NavLink>
+    </li>
+    <p>THEME</p>
+    <li>
+      <NavLink className="passive" activeClassName="active" to="/colors"><li>Colors</li></NavLink>
+    </li>
+    <li>Typography</li>
+    <p>COMPONENTS</p>
+    <li>Base</li>
+    <li>Buttons</li>
+    <li>Charts</li>
+    <li>Editors</li>
+    <li>
+      <NavLink className="passive" activeClassName="active" to="/forms"><li>Forms</li></NavLink>
+    </li>
+    <li>Google Maps</li>
+    <li>Icons</li>
+    <li>Notifications</li>
+    <li>Plugins</li>
+    <li>Tables</li>
+    <li>Widjets</li>
+    <p>EXTRAS</p>
+  </Menu>
+);
 
-const mapStateToProps = (state) => {
-  return {
-    isOpen: state,
-  }
-};
+const mapStateToProps = (state) => ({ isOpen: state });
 
 export default connect(mapStateToProps)(SideBar);

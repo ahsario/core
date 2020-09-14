@@ -46,7 +46,8 @@ const Right = styled.ul`
 const Picture = styled.div`
   width:30px;
   height:25px;
-  background: ${props => props.image};
+  background-image: url('../../../src/sprite.png');
+  background-position: ${(props) => props.image};
 `;
 
 const Hamburger = styled.div`
@@ -56,66 +57,60 @@ const Hamburger = styled.div`
   background-size: contain;
 `;
 
-const Header = ({ tog }) => {
-  return (
-    <Head>
-      <Left>
-        <Hamburger
-          onClick={tog}
+const Header = ({ tog }) => (
+  <Head>
+    <Left>
+      <Hamburger
+        onClick={tog}
+      />
+      <li><NavLink className="passive" to="/chart">Dashboard</NavLink></li>
+      <li>Users</li>
+      <li>Settings</li>
+    </Left>
+    <Right>
+      <li>
+        <Picture
+          image="130px 378px"
         />
-        <li><NavLink className="passive" to="/colors">Dashboard</NavLink></li>
-        <li>Users</li>
-        <li>Settings</li>
-      </Left>
-      <Right>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 130px 378px"
-          />
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 355px 378px"
-          />
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 355px 315px"
-          />
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 243px 190px"
-          />
-        </li>
-        <li>
-          <Popup
-            trigger={
-              (
-                <Picture
-                  image="url('../../../src/sprite.png') 469px 440px"
-                />
-              )
-            }
-            position="bottom center"
-          >
-            <PopUpMenu />
-          </Popup>
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 130px 128px"
-          />
-        </li>
-      </Right>
-    </Head>
-  );
-};
+      </li>
+      <li>
+        <Picture
+          image="355px 378px"
+        />
+      </li>
+      <li>
+        <Picture
+          image="355px 315px"
+        />
+      </li>
+      <li>
+        <Picture
+          image="243px 190px"
+        />
+      </li>
+      <li>
+        <Popup
+          trigger={
+            (
+              <Picture
+                image="469px 440px"
+              />
+            )
+          }
+          position="bottom center"
+        >
+          <PopUpMenu />
+        </Popup>
+      </li>
+      <li>
+        <Picture
+          image="130px 128px"
+        />
+      </li>
+    </Right>
+  </Head>
+);
 
-const mapStateToProps = (state) => {
-  return {
-    isOpen: state,
-  }
-};
+const mapStateToProps = (state) => ({ isOpen: state });
 
 export default connect(mapStateToProps, actions)(Header);

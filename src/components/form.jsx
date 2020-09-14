@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import Fields from './field';
+import RenderItems from './field';
 
 const FormTemplate = styled.div`
   flex-grow: 0;
@@ -36,15 +36,14 @@ const FormTemplate = styled.div`
   }
 `;
 
-const Forms = ({ formTittle, fieldNames }) => {
-  return (
-    <FormTemplate>
-      <p>
-        <b>{formTittle}</b>
-        Form
-      </p>
-      <Fields fieldNames={fieldNames} />
-    </FormTemplate>
-  );
-};
+const Forms = ({ formTittle, fieldNames }) => (
+  <FormTemplate>
+    <p>
+      <b>{formTittle}</b>
+      Form
+    </p>
+    <RenderItems fieldNames={fieldNames} />
+  </FormTemplate>
+);
+
 export default Forms;

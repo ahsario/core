@@ -1,6 +1,5 @@
 import React from 'react';
 import { styled } from 'linaria/react';
-import { Link, NavLink } from 'react-router-dom';
 
 const Modal = styled.div`
   width: 150px;
@@ -21,48 +20,47 @@ const Modal = styled.div`
 const Picture = styled.div`
   width:30px;
   height:25px;
-  background: ${props => props.image};
+  background-image: url('../../../src/sprite.png');
+  background-position: ${(props) => props.image};
 `;
 
-const PopUpMenu = () => {
-  return (
-    <Modal>
-      Account
-      <li>
-        <Picture image="url('../../../src/sprite.png') 130px 378px" />
-        Updates
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 355px 378px" />
-        Messages
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 355px 315px" />
-        Tasks
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 243px 190px" />
-        Comments
-      </li>
+const PopUpMenu = () => (
+  <Modal>
+    Account
+    <li>
+      <Picture image="130px 378px" />
+      Updates
+    </li>
+    <li>
+      <Picture image="355px 378px" />
+      Messages
+    </li>
+    <li>
+      <Picture image="355px 315px" />
+      Tasks
+    </li>
+    <li>
+      <Picture image="243px 190px" />
+      Comments
+    </li>
+    Settings
+    <li>
+      <Picture image="130px 378px" />
+      Profile
+    </li>
+    <li>
+      <Picture image="355px 378px" />
       Settings
-      <li>
-        <Picture image="url('../../../src/sprite.png') 130px 378px" />
-        Profile
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 355px 378px" />
-        Settings
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 355px 315px" />
-        Payments
-      </li>
-      <li>
-        <Picture image="url('../../../src/sprite.png') 243px 190px" />
-        Projects
-      </li>
-    </Modal>
-  );
-};
+    </li>
+    <li>
+      <Picture image="355px 315px" />
+      Payments
+    </li>
+    <li>
+      <Picture image="243px 190px" />
+      Projects
+    </li>
+  </Modal>
+);
 
 export default PopUpMenu;

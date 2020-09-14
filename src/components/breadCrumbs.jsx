@@ -25,6 +25,9 @@ const Left = styled.ul`
     text-decoration:none;
     color:grey;
     }
+    .home{
+      font-weight: bold;
+    }
   }
 `;
 
@@ -42,35 +45,34 @@ const Right = styled.ul`
 const Picture = styled.div`
   width:30px;
   height:25px;
-  background: ${props => props.image};
+  background-image: url('../../../src/sprite.png');
+  background-position: ${(props) => props.image};
 `;
 
-const BreadCrumbs = () => {
-  return (
-    <Head>
-      <Left>
-        <li><NavLink className="passive" to="/"><b>Home /</b></NavLink></li>
-      </Left>
-      <Right>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 355px 378px"
-          />
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 469px 65px"
-          />
-          Dashboard
-        </li>
-        <li>
-          <Picture
-            image="url('../../../src/sprite.png') 130px 440px"
-          />
-          Settings
-        </li>
-      </Right>
-    </Head>
-  );
-};
+const BreadCrumbs = () => (
+  <Head>
+    <Left>
+      <li><NavLink className="passive" to="/"><div className="home">Home /</div></NavLink></li>
+    </Left>
+    <Right>
+      <li>
+        <Picture
+          image="355px 378px"
+        />
+      </li>
+      <li>
+        <Picture
+          image="469px 65px"
+        />
+        Dashboard
+      </li>
+      <li>
+        <Picture
+          image="130px 440px"
+        />
+        Settings
+      </li>
+    </Right>
+  </Head>
+);
 export default BreadCrumbs;
