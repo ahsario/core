@@ -3,9 +3,9 @@ import { styled } from 'linaria/react';
 import ColorTemplate from './colorTemplate';
 
 const Tittle = styled.div`
-  margin:20px;
-  background-color:white;  
-  p{
+  margin: 20px;
+  background-color: white;  
+  p {
     padding: 10px;
     color: grey;
     border-bottom: 2px solid #a0a0a0;
@@ -14,7 +14,7 @@ const Tittle = styled.div`
 
 const Line = styled.div`
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 `;
 
 const ColorsPage = () => (

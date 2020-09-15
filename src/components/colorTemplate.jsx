@@ -4,15 +4,15 @@ import { styled } from 'linaria/react';
 const Color = styled.div`
   width: 150px;
   background-color: white;
-  div{
+  div {
     width: 100px;
     height: 100px;
     background-color: ${(props) => props.color};
   }
-  p{
+  p {
     border-bottom: 2px solid #a0a0a0;
   }
-  h4{
+  h4 {
     display: inline;
     color: lightgray;
   }

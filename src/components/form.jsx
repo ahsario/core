@@ -4,31 +4,31 @@ import RenderItems from './field';
 
 const FormTemplate = styled.div`
   flex-grow: 0;
-  width:600px;
+  width: 600px;
   color: grey;
   vertical-align: middle;
 
   background-color: white;
-  p{
+  p {
     border-bottom: 2px solid #a0a0a0;
-    padding:10px;
+    padding: 10px;
   };
-  label{
-    margin-left:10px;
+  label {
+    margin-left: 10px;
   }
-  input{
+  input {
     border: 2px solid #a0a0a0;
     width: 93%;
     margin: 10px;
     color: grey;
   };
-  input[type=submit]{
+  input[type=submit] {
     display: inline;
     width: 60px;
     background-color: blue;
     color: white;
   }
-  input[type=reset]{
+  input[type=reset] {
     display: inline;
     width: 60px;
     background-color: red;

@@ -21,19 +21,19 @@ const Menu = styled.div`
     font-size: 25px;
     color: #818181;
     transition: 0.3s;
-    .passive{
+    .passive {
       width:100%;
       text-decoration: none;
       color:#818181;
     }
-    .active{
+    .active {
       text-decoration: none;
-      background-color:#321fdb;
+      background-color: #321fdb;
     }
   }
-  p{
+  p {
       padding-left: 8px;
-      margin-top:50px;
+      margin-top: 50px;
       font-size: 25px;
       color: white;
     }

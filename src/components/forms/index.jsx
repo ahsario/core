@@ -7,7 +7,7 @@ import HorizontalForm from './horizontalForm';
 
 const Forms = styled.div`
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   margin-bottom: 20px;
 `;
 
