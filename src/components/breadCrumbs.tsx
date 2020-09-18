@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PictureTemp, { Head, LeftMenu, RightMenu } from './styled';
 
-const BreadCrumbs = () => (
+const BreadCrumbs: React.SFC<{}> = ({}) => (
   <Head className="bread">
     <LeftMenu>
-      <li><NavLink className="passive" to="/"><div className="home">Home /</div></NavLink></li>
+      <li><NavLink className="passive" to="/" exact><div className="home">Home /</div></NavLink></li>
     </LeftMenu>
     <RightMenu>
       <li>

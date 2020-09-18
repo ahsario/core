@@ -7,7 +7,7 @@ const Color = styled.div`
   div {
     width: 100px;
     height: 100px;
-    background-color: ${(props) => props.color};
+    background-color: ${(props: any): string => props.color};
   }
   p {
     border-bottom: 2px solid #a0a0a0;
@@ -18,7 +18,13 @@ const Color = styled.div`
   }
 `;
 
-const colorTemplate = ({ name, hex, rgb }) => (
+interface TempleProps {
+  name: string,
+  hex: string,
+  rgb: string
+}
+
+const colorTemplate: React.FC<TempleProps> = ({ name, hex, rgb }) => (
   <Color color={hex}>
     <div />
     <p>

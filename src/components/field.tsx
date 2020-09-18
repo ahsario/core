@@ -1,6 +1,16 @@
 import React from 'react';
 
-const RenderItems = ({ fieldNames }) => fieldNames.map(({ name, type, value }) => {
+type ItemProps = {
+  fieldNames: any,
+}
+
+interface IProps{
+  name: string,
+  type: string,
+  value: string
+}
+
+const RenderItems: React.FC<ItemProps> = ({ fieldNames }) => fieldNames.map(({ name, type, value }: IProps) => {
   if (name) {
     return (
       <div>

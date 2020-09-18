@@ -1,7 +1,7 @@
 import React from 'react';
 import Forms from '../form';
 
-const HorizontalForm = () => (
+const HorizontalForm: React.FC = () => (
   <div>
     <Forms
       formTittle="Horizontal "

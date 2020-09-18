@@ -8,12 +8,20 @@ import FormsPage from './forms';
 import ColorsPage from './colorsPage';
 import ChartPage from './chart/index';
 
+export interface IStyle {
+  [key: string]: string;
+}
+
 const BodyDiv = styled.div`
   transition: margin-left .5s; /* If you want a transition effect */
-  margin-left: ${(props) => props.marginLeft};
+  margin-left: ${(props: any):string => props.marginLeft};
 `;
 
-const Body = ({ isOpen }) => (
+interface bodyProps{
+  isOpen: {}
+}
+
+const Body: React.FC<bodyProps> = ({ isOpen }) => (
   <BodyDiv marginLeft={isOpen ? '250px' : '0'}>
     <Header />
     <BreadCrumbs />
@@ -25,6 +33,6 @@ const Body = ({ isOpen }) => (
   </BodyDiv>
 );
 
-const mapStateToProps = (state) => ({ isOpen: state });
+const mapStateToProps = (state: {}) => ({ isOpen: state });
 
 export default connect(mapStateToProps)(Body);

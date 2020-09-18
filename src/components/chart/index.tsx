@@ -15,11 +15,11 @@ const Picture = styled.div`
   padding-left: 10px;
   flex-basis:150px;
   height: 130px;
-  background: ${(props) => props.image};
+  background: ${(props: any) => props.image};
 `;
 
-const ChartPage = () => {
-  const renderPictures = (num) => (<Picture image={`url(../../../src/image/img${num}.png)`} no-repeat />);
+const ChartPage: React.FC = () => {
+  const renderPictures = (num: number) => (<Picture image={`url(../../../src/image/img${num}.png)`} no-repeat />);
 
   return (
     <div>
