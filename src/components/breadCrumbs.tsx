@@ -5,7 +5,13 @@ import PictureTemp, { Head, LeftMenu, RightMenu } from './styled';
 const BreadCrumbs: React.SFC<{}> = ({}) => (
   <Head className="bread">
     <LeftMenu>
-      <li><NavLink className="passive" to="/" exact><div className="home">Home /</div></NavLink></li>
+      <li>
+        <NavLink className="passive" to="/" exact>
+          <div className="home">
+            Home /
+          </div>
+        </NavLink>
+      </li>
     </LeftMenu>
     <RightMenu>
       <li>
@@ -13,7 +19,9 @@ const BreadCrumbs: React.SFC<{}> = ({}) => (
       </li>
       <li>
         <PictureTemp image="469px 65px" />
-        <NavLink className="passive" to="/chart">Dashboard</NavLink>
+        <NavLink className="passive" to="/chart">
+          Dashboard
+        </NavLink>
       </li>
       <li>
         <PictureTemp image="130px 440px" />

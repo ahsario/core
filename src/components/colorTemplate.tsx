@@ -7,7 +7,7 @@ const Color = styled.div`
   div {
     width: 100px;
     height: 100px;
-    background-color: ${(props: any): string => props.color};
+    background-color: ${(props: Partial<ColorProps>): string => props.color!};
   }
   p {
     border-bottom: 2px solid #a0a0a0;
@@ -17,7 +17,9 @@ const Color = styled.div`
     color: lightgray;
   }
 `;
-
+interface ColorProps {
+  color: string
+}
 interface TempleProps {
   name: string,
   hex: string,

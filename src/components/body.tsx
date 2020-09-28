@@ -14,14 +14,17 @@ export interface IStyle {
 
 const BodyDiv = styled.div`
   transition: margin-left .5s; /* If you want a transition effect */
-  margin-left: ${(props: any):string => props.marginLeft};
+  margin-left: ${(props: Partial<Props>):string => props.marginLeft!};
 `;
+interface Props {
+  marginLeft: string
+}
 
-interface bodyProps{
+interface BodyProps{
   isOpen: {}
 }
 
-const Body: React.FC<bodyProps> = ({ isOpen }) => (
+const Body: React.FC<BodyProps> = ({ isOpen }) => (
   <BodyDiv marginLeft={isOpen ? '250px' : '0'}>
     <Header />
     <BreadCrumbs />
