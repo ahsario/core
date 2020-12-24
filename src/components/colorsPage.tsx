@@ -17,7 +17,7 @@ const Line = styled.div`
   justify-content: space-around;
 `;
 
-const ColorsPage = () => (
+const ColorsPage: React.FC = () => (
   <Tittle>
     <p>Theme colors</p>
     <Line>

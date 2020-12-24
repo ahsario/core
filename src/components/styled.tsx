@@ -1,7 +1,12 @@
 import React from 'react';
 import { styled } from 'linaria/react';
 
-export const PictureTemps = styled.div`
+
+export interface IStyle {
+  [key: string]: string;
+}
+
+export const PictureTemps = styled.div<IStyle>`
   width: 30px;
   height: 25px;
   background-image: url('../../../src/sprite.png');
@@ -54,5 +59,9 @@ export const RightMenu = styled.ul`
   }
 `;
 
-const PictureTemp = ({ image }) => <PictureTemps image={image} />;
+export type PictureTempProps = {
+  image: string;
+}
+
+const PictureTemp: React.FC<PictureTempProps> = ({ image }) => <PictureTemps image={image} />;
 export default PictureTemp;

@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from './sideBar';
 import Body from './body';
 
-const App = () => (
+const App: React.FC = () => (
   <div>
     <SideBar />
     <Body />

@@ -14,7 +14,7 @@ const Hamburger = styled.div`
   background-size: contain;
 `;
 
-export const menuItem = (pos) => (
+export const menuItem = (pos: string) => (
   <li>
     <PictureTemp
       image={pos}
@@ -22,7 +22,11 @@ export const menuItem = (pos) => (
   </li>
 );
 
-const Header = ({ tog }) => (
+interface headerProps{
+  tog():void
+}
+
+const Header: React.FC<headerProps> = ({ tog }) => (
   <Head>
     <LeftMenu>
       <Hamburger
@@ -50,6 +54,6 @@ const Header = ({ tog }) => (
   </Head>
 );
 
-const mapStateToProps = (state) => ({ isOpen: state });
+const mapStateToProps = (state: {}) => ({ isOpen: state });
 
 export default connect(mapStateToProps, actions)(Header);

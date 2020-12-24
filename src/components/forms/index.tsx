@@ -11,7 +11,7 @@ const Forms = styled.div`
   margin-bottom: 20px;
 `;
 
-const FormsPage = () => (
+const FormsPage: React.FC = () => (
   <div>
     <Forms>
       <CreditCardForm />

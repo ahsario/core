@@ -1,7 +1,7 @@
 import React from 'react';
 import Forms from '../form';
 
-const CreditCardForm = () => (
+const CreditCardForm: React.FC = () => (
   <Forms
     formTittle="Credit Card "
     fieldNames={[

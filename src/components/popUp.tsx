@@ -18,8 +18,7 @@ const Modal = styled.div`
   }
 `;
 
-
-const PopUpMenu = () => (
+const PopUpMenu: React.FC = () => (
   <Modal>
     Account
     <li>

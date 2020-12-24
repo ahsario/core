@@ -111,7 +111,7 @@ const divStyle = {
   margin: '20px auto',
 };
 
-const SimpleChartComponent = () => (
+const SimpleChartComponent: React.FC = () => (
   <div style={divStyle}><JSCharting options={config} /></div>
 );
 

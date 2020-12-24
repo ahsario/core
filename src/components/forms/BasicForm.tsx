@@ -1,7 +1,7 @@
 import React from 'react';
 import Forms from '../form';
 
-const BasicForm = () => (
+const BasicForm: React.FC = () => (
   <Forms
     formTittle="Basic "
     fieldNames={[

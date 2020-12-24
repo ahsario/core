@@ -1,4 +1,4 @@
-const reducer = (state = false, action) => {
+const reducer = (state: boolean = false, action: any) => {
   switch (action.type) {
     case 'TOG':
       return !state;

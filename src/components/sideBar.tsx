@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const Menu = styled.div`
   height: 100%;
-  width: ${(props) => props.width};
+  width: ${(props: any) => props.width};
   position: fixed;
   z-index: 1;
   top: 0;
@@ -42,7 +42,11 @@ const Menu = styled.div`
   }
 `;
 
-const SideBar = ({ isOpen }) => (
+interface SideProps{
+  isOpen: {}
+}
+
+const SideBar: React.FC<SideProps> = ({ isOpen }) => (
   <Menu width={isOpen ? '250px' : '0'}>
     <li>
       <NavLink className="passive" activeClassName="active" to="/chart"><li>Dashboard</li></NavLink>
@@ -70,6 +74,6 @@ const SideBar = ({ isOpen }) => (
   </Menu>
 );
 
-const mapStateToProps = (state) => ({ isOpen: state });
+const mapStateToProps = (state: {}) => ({ isOpen: state });
 
 export default connect(mapStateToProps)(SideBar);

@@ -4,6 +4,7 @@ import RenderItems from './field';
 
 const FormTemplate = styled.div`
   flex-grow: 0;
+  margin-top: 25px;
   width: 600px;
   color: grey;
   vertical-align: middle;
@@ -24,19 +25,22 @@ const FormTemplate = styled.div`
   };
   input[type=submit] {
     display: inline;
-    width: 60px;
     background-color: blue;
     color: white;
   }
   input[type=reset] {
     display: inline;
-    width: 60px;
     background-color: red;
     color: white;
   }
 `;
 
-const Forms = ({ formTittle, fieldNames }) => (
+interface FormsProps{
+  formTittle: string,
+  fieldNames: any
+}
+
+const Forms: React.FC<FormsProps> = ({ formTittle, fieldNames }) => (
   <FormTemplate>
     <p>
       <b>{formTittle}</b>
